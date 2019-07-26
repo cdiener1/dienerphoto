@@ -165,7 +165,7 @@ body {margin:0;font-family:Arial}
       </div>
   <a href="contact.html">Contact</a>
   <a href="cart.html">
-  <span class="p1 tack" data-count="4">
+  <span id="yo" class="p1 tack" data-count="4">
     <i class="fas fa-shopping-cart fa-stack-1x"></i>
   </span>
   </a>
@@ -223,10 +223,11 @@ function getCookie(cname) {
 function checkCookie() {
   var user=getCookie("username");
   if (user != "") {
-  	user--;
+  	user++;
   	setCookie("username", user, 30);
     var user=getCookie("username");
-    alert(user);
+    var x = document.getElementById("yo");
+  x.style.data-count = "3";
   } else {
      {
        setCookie("username", 1, 30);
